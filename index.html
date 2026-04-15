@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dylan Robinson | Backend Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Dylan Robinson, a backend software engineer focused on scalable APIs, distributed systems, and data-heavy applications."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="#top" aria-label="Dylan Robinson home">DR</a>
+        <nav aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Backend Software Engineer</p>
+            <h1>Dylan Robinson</h1>
+            <p class="hero-text">
+              I build scalable APIs, backend systems, and data-heavy services
+              with TypeScript, Python, SQL, and cloud tooling. I care about
+              reliable architecture, clear ownership, and software that solves
+              real problems.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects"
+                >View Projects</a
+              >
+              <a
+                class="button button-secondary"
+                href="assets/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
+            </div>
+
+            <ul class="hero-links" aria-label="Contact links">
+              <li>
+                <a href="mailto:dylrob123@gmail.com">dylrob123@gmail.com</a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/djdillybdev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/in/dylan-robinson-78b643157"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>Madrid, Spain</li>
+            </ul>
+          </div>
+
+          <aside class="profile-panel" aria-label="Professional focus">
+            <img
+              src="https://github.com/djdillybdev.png"
+              alt="Dylan Robinson"
+              width="160"
+              height="160"
+            />
+            <div>
+              <h2>Focus</h2>
+              <ul>
+                <li>Backend APIs and service design</li>
+                <li>Distributed systems and event-driven architecture</li>
+                <li>Data-heavy applications and integrations</li>
+                <li>Cloud infrastructure and developer tooling</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">About</p>
+            <h2>Backend engineering with a systems mindset</h2>
+          </div>
+
+          <div class="content-grid">
+            <div class="panel">
+              <p>
+                I have 5+ years of experience building backend systems and APIs,
+                with work spanning cloud services, distributed data flows,
+                observability, and production reliability.
+              </p>
+              <p>
+                My background includes high-scale health data systems, backend
+                features for SaaS platforms, and personal projects centered on
+                automation, productivity, and content platforms. I am passionate
+                about building useful products that solve real problems and help
+                improve people's lives.
+              </p>
+              <p>
+                I am currently based in Madrid, completing a master's in
+                software engineering while continuing to build backend-heavy
+                projects and pursue roles across backend, platform, and cloud
+                systems.
+              </p>
+            </div>
+
+            <div class="panel">
+              <h3>Core technologies</h3>
+              <div class="tag-group">
+                <span>TypeScript</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>SQL</span>
+                <span>PHP</span>
+                <span>Node.js</span>
+                <span>FastAPI</span>
+                <span>PostgreSQL</span>
+                <span>AWS</span>
+                <span>Docker</span>
+                <span>OpenSearch</span>
+                <span>React</span>
+                <span>Svelte</span>
+                <span>GitHub Actions</span>
+                <span>Ansible</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>Selected work</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="card project-card">
+              <div class="project-top">
+                <h3>ChooseYourTube</h3>
+                <p class="project-stack">
+                  Svelte / FastAPI / TypeScript / Python
+                </p>
+              </div>
+              <p>
+                A distraction-reduced YouTube viewing experience built to give
+                users more control over how they browse and watch content.
+              </p>
+              <ul>
+                <li>
+                  Built as a single repository with the application code kept
+                  together for simpler development and deployment.
+                </li>
+                <li>
+                  Built around an API-backed flow for structured content and
+                  metadata handling.
+                </li>
+                <li>
+                  Organized with future containerized deployment and iteration
+                  in mind.
+                </li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://github.com/djdillybdev/ChooseYourTube"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub repo
+                </a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <div class="project-top">
+                <h3>Personal RSS Reader</h3>
+                <p class="project-stack">FastAPI / PostgreSQL / React / Vite</p>
+              </div>
+              <p>
+                A personal feed reader architecture for managing RSS feeds,
+                articles, YouTube sources, favorites, and reading state through
+                a custom backend.
+              </p>
+              <ul>
+                <li>Designed around a clean API-first backend.</li>
+                <li>
+                  Structured to support article metadata, categories, and read
+                  status.
+                </li>
+                <li>
+                  Planned with extensibility toward desktop or self-hosted use.
+                </li>
+              </ul>
+            </article>
+
+            <article class="card project-card">
+              <div class="project-top">
+                <h3>Productivity Automation Bot</h3>
+                <p class="project-stack">
+                  TypeScript / SQLite / Todoist / Google Calendar
+                </p>
+              </div>
+              <p>
+                A productivity-focused bot concept that connects tasks,
+                reminders, and planning workflows into one system for personal
+                use.
+              </p>
+              <ul>
+                <li>Designed around Todoist as the task source of truth.</li>
+                <li>
+                  Integrated planning concepts for calendar and reminder
+                  workflows.
+                </li>
+                <li>
+                  Explored extensibility with summaries and LLM-powered task
+                  breakdowns.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Experience</p>
+            <h2>Highlights</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="card timeline-item">
+              <div class="timeline-header">
+                <h3>Software Engineer - 1upHealth</h3>
+                <p>Boston, MA</p>
+              </div>
+              <p>
+                Worked on backend systems and APIs handling high-volume health
+                data workloads, with a focus on scalable services, reliability,
+                and distributed processing.
+              </p>
+            </article>
+
+            <article class="card timeline-item">
+              <div class="timeline-header">
+                <h3>Software Engineer Intern - Cofrai</h3>
+                <p>Madrid, Spain</p>
+              </div>
+              <p>
+                Built backend and product-facing features in a SaaS platform,
+                contributing to application functionality and maintainable web
+                development workflows.
+              </p>
+            </article>
+
+            <article class="card timeline-item">
+              <div class="timeline-header">
+                <h3>Current Focus</h3>
+                <p>Master's in Software Engineering</p>
+              </div>
+              <p>
+                Completing graduate study in Madrid while continuing to build
+                backend-heavy projects and target roles in backend engineering,
+                platform engineering, and cloud systems.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-contact">
+        <div class="container">
+          <div class="contact-panel">
+            <div>
+              <p class="eyebrow">Contact</p>
+              <h2>Let's connect</h2>
+              <p>
+                I am interested in backend engineering roles where I can work on
+                scalable systems, useful products, and strong technical teams.
+              </p>
+            </div>
+            <div class="contact-links">
+              <a
+                class="button button-primary"
+                href="mailto:dylrob123@gmail.com"
+              >
+                Email me
+              </a>
+              <a
+                class="button button-secondary"
+                href="https://github.com/djdillybdev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                class="button button-secondary"
+                href="https://linkedin.com/in/dylan-robinson-78b643157"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
