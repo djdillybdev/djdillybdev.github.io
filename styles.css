@@ -1,17 +1,21 @@
 :root {
-  --bg: #101312;
-  --surface: #171b1a;
-  --surface-strong: #202624;
-  --text: #f4f1e8;
-  --text-soft: #b9c0ba;
-  --muted: #8f9993;
-  --border: rgba(244, 241, 232, 0.12);
-  --accent: #53d6a3;
-  --accent-strong: #86e8bf;
-  --accent-dark: #092318;
+  --bg: #101612;
+  --bg-deep: #0b100d;
+  --surface: #182019;
+  --surface-strong: #202a22;
+  --paper: #f2eddf;
+  --text: #f6f1e6;
+  --text-soft: #c8d0c2;
+  --muted: #93a08f;
+  --border: rgba(242, 237, 223, 0.16);
+  --map-line: rgba(242, 237, 223, 0.055);
+  --moss: #8fbf86;
+  --alpine: #8ed1d6;
+  --summit: #f0b35b;
+  --summit-dark: #2c1c08;
   --max-width: 1120px;
   --radius: 8px;
-  --shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+  --shadow: 0 20px 50px rgba(2, 8, 5, 0.32);
 }
 
 * {
@@ -34,15 +38,40 @@ body {
 body::before {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   background:
-    linear-gradient(135deg, rgba(83, 214, 163, 0.1), transparent 32%),
-    linear-gradient(180deg, #101312 0%, #121617 46%, #0f1110 100%);
+    radial-gradient(ellipse at 15% 8%, rgba(142, 209, 214, 0.16), transparent 34%),
+    radial-gradient(ellipse at 84% 18%, rgba(240, 179, 91, 0.1), transparent 28%),
+    linear-gradient(180deg, #162018 0%, #101612 48%, #0b100d 100%);
   content: "";
 }
 
+body::after {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    repeating-radial-gradient(
+      ellipse at 18% 16%,
+      transparent 0 18px,
+      var(--map-line) 19px 20px,
+      transparent 21px 42px
+    ),
+    repeating-radial-gradient(
+      ellipse at 76% 32%,
+      transparent 0 24px,
+      rgba(142, 209, 214, 0.045) 25px 26px,
+      transparent 27px 54px
+    ),
+    linear-gradient(90deg, rgba(242, 237, 223, 0.025) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(242, 237, 223, 0.02) 1px, transparent 1px);
+  background-size: auto, auto, 72px 72px, 72px 72px;
+  content: "";
+  pointer-events: none;
+}
+
 a {
-  color: var(--accent-strong);
+  color: var(--alpine);
   text-decoration: none;
 }
 
@@ -73,12 +102,13 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  max-width: 9ch;
+  font-size: clamp(2.9rem, 6vw, 5.5rem);
   letter-spacing: 0;
 }
 
 h2 {
-  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-size: clamp(1.9rem, 3vw, 2.65rem);
 }
 
 h3 {
@@ -95,7 +125,7 @@ h3 {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--border);
-  background: rgba(16, 19, 18, 0.84);
+  background: rgba(13, 19, 15, 0.84);
   backdrop-filter: blur(14px);
 }
 
@@ -112,11 +142,11 @@ h3 {
   justify-content: center;
   width: 42px;
   height: 42px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(240, 179, 91, 0.45);
   border-radius: var(--radius);
-  background: var(--surface);
-  color: var(--text);
-  font-weight: 800;
+  background: linear-gradient(135deg, rgba(240, 179, 91, 0.2), rgba(143, 191, 134, 0.1));
+  color: var(--paper);
+  font-weight: 850;
 }
 
 .nav nav {
@@ -125,17 +155,38 @@ h3 {
 }
 
 .nav nav a {
+  position: relative;
   color: var(--text-soft);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.nav nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.35rem;
+  left: 0;
+  height: 2px;
+  background: var(--summit);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.35);
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease;
 }
 
 .nav nav a:hover {
   color: var(--text);
 }
 
+.nav nav a:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
 .hero {
-  padding: 6.5rem 0 4.75rem;
+  padding: 7rem 0 5rem;
 }
 
 .hero-grid {
@@ -149,11 +200,12 @@ h3 {
   max-width: 760px;
 }
 
-.eyebrow {
+.eyebrow,
+.panel-kicker {
   margin: 0 0 0.85rem;
-  color: var(--accent-strong);
+  color: var(--summit);
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 850;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -162,6 +214,38 @@ h3 {
   max-width: 62ch;
   margin-top: 1.25rem;
   font-size: 1.14rem;
+}
+
+.field-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  max-width: 680px;
+  margin: 1.6rem 0 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--border);
+}
+
+.field-notes div {
+  min-width: 0;
+  padding: 0.85rem;
+  background: rgba(24, 32, 25, 0.86);
+}
+
+.field-notes dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.field-notes dd {
+  margin: 0.2rem 0 0;
+  color: var(--paper);
+  font-size: 0.95rem;
+  font-weight: 750;
 }
 
 .hero-actions,
@@ -181,7 +265,7 @@ h3 {
   padding: 0.75rem 1rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  font-weight: 800;
+  font-weight: 850;
   transition:
     background 0.16s ease,
     border-color 0.16s ease,
@@ -194,18 +278,22 @@ h3 {
 
 .button-primary {
   border-color: transparent;
-  background: var(--accent);
-  color: #07130d;
+  background: var(--summit);
+  color: var(--summit-dark);
 }
 
 .button-primary:hover {
-  background: var(--accent-strong);
-  color: #07130d;
+  background: #ffd08a;
+  color: var(--summit-dark);
 }
 
 .button-secondary {
-  background: rgba(244, 241, 232, 0.04);
-  color: var(--text);
+  background: rgba(242, 237, 223, 0.05);
+  color: var(--paper);
+}
+
+.button-secondary:hover {
+  border-color: rgba(142, 209, 214, 0.5);
 }
 
 .hero-links {
@@ -224,14 +312,41 @@ h3 {
   min-height: 28px;
 }
 
+.hero-links li::before {
+  width: 6px;
+  height: 6px;
+  margin-right: 0.45rem;
+  border-radius: 50%;
+  background: var(--moss);
+  content: "";
+}
+
 .profile-panel,
 .panel,
 .card,
 .contact-panel {
+  position: relative;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: rgba(23, 27, 26, 0.86);
+  background:
+    linear-gradient(135deg, rgba(242, 237, 223, 0.055), transparent 40%),
+    rgba(24, 32, 25, 0.9);
   box-shadow: var(--shadow);
+}
+
+.profile-panel::before,
+.panel::before,
+.card::before,
+.contact-panel::before {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 34px;
+  height: 34px;
+  border-top: 1px solid rgba(240, 179, 91, 0.5);
+  border-right: 1px solid rgba(240, 179, 91, 0.5);
+  content: "";
+  pointer-events: none;
 }
 
 .profile-panel {
@@ -243,9 +358,10 @@ h3 {
 .profile-panel img {
   width: 160px;
   aspect-ratio: 1;
-  border: 1px solid var(--border);
+  border: 2px solid rgba(240, 179, 91, 0.55);
   border-radius: var(--radius);
   object-fit: cover;
+  filter: saturate(0.92) contrast(1.04);
 }
 
 .profile-panel h2 {
@@ -258,6 +374,11 @@ h3 {
   padding-left: 1.15rem;
   margin: 0.9rem 0 0;
   color: var(--text-soft);
+}
+
+.profile-panel li::marker,
+.project-card li::marker {
+  color: var(--moss);
 }
 
 .profile-panel li + li,
@@ -300,12 +421,12 @@ h3 {
   align-items: center;
   min-height: 34px;
   padding: 0.4rem 0.7rem;
-  border: 1px solid rgba(83, 214, 163, 0.2);
+  border: 1px solid rgba(143, 191, 134, 0.32);
   border-radius: var(--radius);
-  background: rgba(83, 214, 163, 0.08);
-  color: var(--text);
+  background: rgba(143, 191, 134, 0.11);
+  color: var(--paper);
   font-size: 0.92rem;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 .projects-grid {
@@ -324,9 +445,13 @@ h3 {
   margin-bottom: 0.9rem;
 }
 
+.project-card h3 {
+  padding-right: 2.6rem;
+}
+
 .project-stack {
   margin-top: 0.35rem;
-  color: var(--muted);
+  color: var(--alpine);
   font-size: 0.92rem;
 }
 
@@ -336,12 +461,23 @@ h3 {
 }
 
 .project-links a {
-  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(142, 209, 214, 0.34);
+  border-radius: var(--radius);
+  background: rgba(142, 209, 214, 0.08);
+  font-weight: 850;
 }
 
 .timeline {
   display: grid;
   gap: 1rem;
+}
+
+.timeline-item {
+  border-left: 3px solid rgba(240, 179, 91, 0.72);
 }
 
 .timeline-header {
@@ -368,8 +504,14 @@ h3 {
   align-items: end;
   padding: 1.5rem;
   background:
-    linear-gradient(135deg, rgba(83, 214, 163, 0.13), transparent 42%),
-    rgba(23, 27, 26, 0.9);
+    repeating-radial-gradient(
+      ellipse at 12% 18%,
+      transparent 0 20px,
+      rgba(242, 237, 223, 0.055) 21px 22px,
+      transparent 23px 46px
+    ),
+    linear-gradient(135deg, rgba(240, 179, 91, 0.14), transparent 42%),
+    rgba(24, 32, 25, 0.94);
 }
 
 .contact-panel p:not(.eyebrow) {
@@ -405,6 +547,10 @@ h3 {
 
   .hero {
     padding: 4.6rem 0 3.4rem;
+  }
+
+  .field-notes {
+    grid-template-columns: 1fr;
   }
 
   .hero-links {
