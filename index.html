@@ -8,12 +8,21 @@
       name="description"
       content="Portfolio of Dylan Robinson, a backend software engineer focused on scalable APIs, distributed systems, and data-heavy applications."
     />
+    <meta name="theme-color" content="#101612" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dylan Robinson | Software Engineer" />
+    <meta property="og:description" content="Backend depth and full-stack product experience across APIs, distributed systems, data, and cloud tooling." />
+    <meta property="og:url" content="https://djdillybdev.github.io/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
   </head>
-  <body>
+  <body id="top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container nav">
-        <a class="logo" href="#top" aria-label="Dylan Robinson home">DR</a>
+          <a class="logo" href="#top" aria-label="Dylan Robinson home">DR</a>
         <nav aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -23,11 +32,11 @@
       </div>
     </header>
 
-    <main id="top">
+    <main id="main-content">
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Backend Software Engineer</p>
+            <p class="eyebrow reveal">Backend Software Engineer / Full-stack builder</p>
             <h1>Dylan Robinson</h1>
             <p class="hero-text">
               I build scalable APIs, backend systems, and data-heavy services
@@ -55,14 +64,7 @@
               <a class="button button-primary" href="#projects"
                 >View Projects</a
               >
-              <a
-                class="button button-secondary"
-                href="assets/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Resume
-              </a>
+              <a class="button button-secondary" href="#experience">Experience</a>
             </div>
 
             <ul class="hero-links" aria-label="Contact links">
@@ -91,16 +93,18 @@
             </ul>
           </div>
 
-          <aside class="profile-panel" aria-label="Professional focus">
+          <aside class="profile-panel reveal" aria-label="Professional focus">
             <img
               src="https://github.com/djdillybdev.png"
               alt="Dylan Robinson"
               width="160"
               height="160"
+              decoding="async"
+              fetchpriority="high"
             />
             <div>
-              <p class="panel-kicker">Field notes</p>
-              <h2>Focus</h2>
+              <p class="panel-kicker">Engineering profile</p>
+              <h2>Backend depth. Product range.</h2>
               <ul>
                 <li>Backend APIs and service design</li>
                 <li>Distributed systems and event-driven architecture</li>
@@ -114,13 +118,13 @@
 
       <section id="about" class="section">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">01 / Basecamp</p>
             <h2>Backend engineering with a systems mindset</h2>
           </div>
 
           <div class="content-grid">
-            <div class="panel">
+            <div class="panel reveal">
               <p>
                 I have 5+ years of experience building backend systems and APIs,
                 with work spanning cloud services, distributed data flows,
@@ -141,7 +145,7 @@
               </p>
             </div>
 
-            <div class="panel">
+            <div class="panel reveal">
               <h3>Core technologies</h3>
               <div class="tag-group">
                 <span>TypeScript</span>
@@ -167,107 +171,86 @@
 
       <section id="projects" class="section">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">02 / Routes</p>
             <h2>Selected work</h2>
           </div>
 
-          <div class="projects-grid">
-            <article class="card project-card">
-              <div class="project-top">
-                <h3>ChooseYourTube</h3>
-                <p class="project-stack">
-                  Svelte / FastAPI / TypeScript / Python
-                </p>
-              </div>
-              <p>
-                A distraction-reduced YouTube viewing experience built to give
-                users more control over how they browse and watch content.
-              </p>
-              <ul>
-                <li>
-                  Built as a single repository with the application code kept
-                  together for simpler development and deployment.
-                </li>
-                <li>
-                  Built around an API-backed flow for structured content and
-                  metadata handling.
-                </li>
-                <li>
-                  Organized with future containerized deployment and iteration
-                  in mind.
-                </li>
-              </ul>
-              <div class="project-links">
-                <a
-                  href="https://github.com/djdillybdev/ChooseYourTube"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub repo
-                </a>
-              </div>
-            </article>
+          <div class="project-explorer reveal">
+            <div class="project-tabs" role="tablist" aria-label="Selected projects">
+              <button id="tab-youtube" role="tab" aria-selected="true" aria-controls="project-youtube" data-project="youtube">ChooseYourTube <span>Svelte + FastAPI</span></button>
+              <button id="tab-rss" role="tab" aria-selected="false" aria-controls="project-rss" tabindex="-1" data-project="rss">Personal RSS Reader <span>React + FastAPI + ARQ</span></button>
+              <button id="tab-bot" role="tab" aria-selected="false" aria-controls="project-bot" tabindex="-1" data-project="bot">Automation Bot <span>Discord.js + TypeScript</span></button>
+            </div>
 
-            <article class="card project-card">
-              <div class="project-top">
-                <h3>Personal RSS Reader</h3>
-                <p class="project-stack">FastAPI / PostgreSQL / React / Vite</p>
-              </div>
-              <p>
-                A personal feed reader architecture for managing RSS feeds,
-                articles, YouTube sources, favorites, and reading state through
-                a custom backend.
-              </p>
-              <ul>
-                <li>Designed around a clean API-first backend.</li>
-                <li>
-                  Structured to support article metadata, categories, and read
-                  status.
-                </li>
-                <li>
-                  Planned with extensibility toward desktop or self-hosted use.
-                </li>
-              </ul>
-            </article>
+            <div class="project-stage">
+              <article id="project-youtube" class="project-detail" role="tabpanel" aria-labelledby="tab-youtube" data-project-panel="youtube">
+                <div class="project-copy">
+                  <p class="project-index">Case study / 01</p>
+                  <h3>ChooseYourTube</h3>
+                  <p>A distraction-reduced YouTube experience that gives viewers more control over browsing and watching content.</p>
+                  <dl class="project-facts"><div><dt>Challenge</dt><dd>Separate intentional viewing from an attention-driven interface.</dd></div><div><dt>Approach</dt><dd>Serve a focused Svelte client from a FastAPI-backed catalog kept current by asynchronous channel sync jobs.</dd></div></dl>
+                  <div class="project-links"><a href="https://github.com/djdillybdev/ChooseYourTube" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a></div>
+                </div>
+                <div class="system-map" aria-describedby="youtube-flow-description">
+                  <span class="map-label">System flow</span>
+                  <div class="flow-lanes" aria-hidden="true">
+                    <div class="flow-lane"><span class="lane-label">Request path</span><div class="map-node client">Svelte Web App</div><div class="map-path bidirectional"><span>API requests</span></div><div class="map-node service">FastAPI</div><div class="map-path bidirectional"><span>read / write</span></div><div class="map-node database">PostgreSQL</div></div>
+                    <div class="flow-lane"><span class="lane-label">Channel updates</span><div class="map-node service">FastAPI</div><div class="map-path"><span>enqueue</span></div><div class="map-node queue">Redis / ARQ</div><div class="map-path"><span>dispatch</span></div><div class="map-node worker">ARQ Worker</div><div class="map-path bidirectional"><span>fetch updates</span></div><div class="map-node external">YouTube Data API</div><div class="map-path"><span>persist</span></div><div class="map-node database">PostgreSQL</div></div>
+                  </div>
+                  <p id="youtube-flow-description">The Svelte app gets its data from FastAPI and PostgreSQL. FastAPI schedules Redis-backed ARQ jobs whose workers fetch channel updates from the YouTube Data API and persist them in PostgreSQL.</p>
+                </div>
+              </article>
 
-            <article class="card project-card">
-              <div class="project-top">
-                <h3>Productivity Automation Bot</h3>
-                <p class="project-stack">
-                  TypeScript / SQLite / Todoist / Google Calendar
-                </p>
-              </div>
-              <p>
-                A productivity-focused bot concept that connects tasks,
-                reminders, and planning workflows into one system for personal
-                use.
-              </p>
-              <ul>
-                <li>Designed around Todoist as the task source of truth.</li>
-                <li>
-                  Integrated planning concepts for calendar and reminder
-                  workflows.
-                </li>
-                <li>
-                  Explored extensibility with summaries and LLM-powered task
-                  breakdowns.
-                </li>
-              </ul>
-            </article>
+              <article id="project-rss" class="project-detail" role="tabpanel" aria-labelledby="tab-rss" data-project-panel="rss">
+                <div class="project-copy">
+                  <p class="project-index">Case study / 02</p><h3>Personal RSS Reader</h3>
+                  <p>An API-first feed reader for articles, YouTube sources, favorites, categories, and reading state.</p>
+                  <dl class="project-facts"><div><dt>Challenge</dt><dd>Unify different content sources behind a focused reading workflow.</dd></div><div><dt>Approach</dt><dd>Normalize feed content through background ingestion while keeping reading state behind one API.</dd></div></dl>
+                </div>
+                <div class="system-map" aria-describedby="rss-flow-description">
+                  <span class="map-label">System flow</span>
+                  <div class="flow-lanes" aria-hidden="true">
+                    <div class="flow-lane"><span class="lane-label">Reading path</span><div class="map-node client">React Web App</div><div class="map-path bidirectional"><span>API requests</span></div><div class="map-node service">FastAPI</div><div class="map-path bidirectional"><span>read / write</span></div><div class="map-node database">PostgreSQL</div></div>
+                    <div class="flow-lane"><span class="lane-label">Feed ingestion</span><div class="map-node external">RSS + YouTube Feeds</div><div class="map-path bidirectional"><span>poll sources</span></div><div class="map-node worker">ARQ Worker</div><div class="map-path bidirectional"><span>jobs</span></div><div class="map-node queue">Redis / ARQ</div><div class="map-path"><span>normalize + persist</span></div><div class="map-node database">PostgreSQL</div></div>
+                  </div>
+                  <p id="rss-flow-description">The React app uses FastAPI for content and reading state stored in PostgreSQL. Redis-backed ARQ workers poll RSS and YouTube feeds, normalize new content, and persist it.</p>
+                </div>
+              </article>
+
+              <article id="project-bot" class="project-detail" role="tabpanel" aria-labelledby="tab-bot" data-project-panel="bot">
+                <div class="project-copy">
+                  <p class="project-index">Case study / 03</p><h3>Productivity Automation Bot</h3>
+                  <p>A TypeScript Discord bot that synchronizes tasks and calendar events and makes both systems available from Discord.</p>
+                  <dl class="project-facts"><div><dt>Challenge</dt><dd>Coordinate planning across tools without duplicating the source of truth.</dd></div><div><dt>Approach</dt><dd>Use Discord as the interaction layer while Todoist and Google Calendar remain the specialized external services.</dd></div></dl>
+                </div>
+                <div class="system-map bot-map" aria-describedby="bot-flow-description">
+                  <span class="map-label">System flow</span>
+                  <div class="bot-flow" aria-hidden="true">
+                    <div class="map-node client bot-discord">Discord</div><div class="map-path bot-link-discord bidirectional"><span>commands + responses</span></div>
+                    <div class="map-node service bot-core">TypeScript Discord Bot</div>
+                    <div class="map-path bot-link-todoist bidirectional"><span>tasks + sync</span></div><div class="map-node external bot-todoist">Todoist</div>
+                    <div class="map-path bot-link-calendar bidirectional"><span>events + sync</span></div><div class="map-node external bot-calendar">Google Calendar</div>
+                    <div class="map-path bot-link-state bidirectional"><span>state</span></div><div class="map-node database bot-state">SQLite</div>
+                  </div>
+                  <p id="bot-flow-description">The TypeScript bot receives commands and returns planning views through Discord. It synchronizes tasks with Todoist, events with Google Calendar, and keeps internal integration state in SQLite.</p>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="experience" class="section">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">03 / Elevation</p>
             <h2>Highlights</h2>
           </div>
 
-          <div class="timeline">
-            <article class="card timeline-item">
+          <div class="timeline" aria-label="Career route">
+            <div class="route-line" aria-hidden="true"><i></i></div>
+            <article class="card timeline-item reveal">
               <div class="timeline-header">
                 <h3>Software Engineer - 1upHealth</h3>
                 <p>Boston, MA</p>
@@ -279,7 +262,7 @@
               </p>
             </article>
 
-            <article class="card timeline-item">
+            <article class="card timeline-item reveal">
               <div class="timeline-header">
                 <h3>Software Engineer Intern - Cofrai</h3>
                 <p>Madrid, Spain</p>
@@ -291,7 +274,7 @@
               </p>
             </article>
 
-            <article class="card timeline-item">
+            <article class="card timeline-item reveal">
               <div class="timeline-header">
                 <h3>Current Focus</h3>
                 <p>Master's in Software Engineering</p>
@@ -308,7 +291,7 @@
 
       <section id="contact" class="section section-contact">
         <div class="container">
-          <div class="contact-panel">
+          <div class="contact-panel reveal">
             <div>
               <p class="eyebrow">04 / Trailhead</p>
               <h2>Let's connect</h2>
@@ -345,5 +328,16 @@
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p><strong>Dylan Robinson</strong> / Software Engineer</p>
+        <nav aria-label="Footer navigation">
+          <a href="mailto:dylrob123@gmail.com">Email</a>
+          <a href="https://github.com/djdillybdev" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/dylan-robinson-78b643157" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>
