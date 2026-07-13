@@ -6,12 +6,12 @@
     <title>Dylan Robinson | Backend Software Engineer</title>
     <meta
       name="description"
-      content="Portfolio of Dylan Robinson, a backend software engineer focused on scalable APIs, distributed systems, and data-heavy applications."
+      content="Portfolio of Dylan Robinson, a backend software engineer focused on scalable APIs, distributed systems, data-heavy applications, and applied NLP research."
     />
     <meta name="theme-color" content="#101612" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Dylan Robinson | Software Engineer" />
-    <meta property="og:description" content="Backend depth and full-stack product experience across APIs, distributed systems, data, and cloud tooling." />
+    <meta property="og:description" content="Backend depth and full-stack product experience across APIs, distributed systems, data, cloud tooling, and applied NLP research." />
     <meta property="og:url" content="https://djdillybdev.github.io/" />
     <meta name="twitter:card" content="summary" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -42,7 +42,8 @@
               I build scalable APIs, backend systems, and data-heavy services
               with TypeScript, Python, SQL, and cloud tooling. I care about
               reliable architecture, clear ownership, and software that solves
-              real problems.
+              real problems, with recent research spanning applied NLP and
+              language-model evaluation.
             </p>
 
             <dl class="field-notes" aria-label="Professional summary">
@@ -109,6 +110,7 @@
                 <li>Backend APIs and service design</li>
                 <li>Distributed systems and event-driven architecture</li>
                 <li>Data-heavy applications and integrations</li>
+                <li>Applied NLP research and model evaluation</li>
                 <li>Cloud infrastructure and developer tooling</li>
               </ul>
             </div>
@@ -138,8 +140,9 @@
                 improve people's lives.
               </p>
               <p>
-                I am currently based in Madrid, completing a master's in
-                software engineering while continuing to build backend-heavy
+                I am currently based in Madrid and have completed a master's in
+                software engineering, including research into detecting foreign
+                words in multilingual text. I continue to build backend-heavy
                 projects and pursue roles across backend, platform, and cloud
                 systems.
               </p>
@@ -161,6 +164,9 @@
                 <span>OpenSearch</span>
                 <span>React</span>
                 <span>Svelte</span>
+                <span>NLP</span>
+                <span>FastText</span>
+                <span>LLM Evaluation</span>
                 <span>GitHub Actions</span>
                 <span>Ansible</span>
               </div>
@@ -178,15 +184,59 @@
 
           <div class="project-explorer reveal">
             <div class="project-tabs" role="tablist" aria-label="Selected projects">
-              <button id="tab-youtube" role="tab" aria-selected="true" aria-controls="project-youtube" data-project="youtube">ChooseYourTube <span>Svelte + FastAPI</span></button>
+              <button id="tab-thesis" role="tab" aria-selected="true" aria-controls="project-thesis" data-project="thesis">Foreign Word Detection Research <span>Master's thesis / Applied NLP</span></button>
+              <button id="tab-youtube" role="tab" aria-selected="false" aria-controls="project-youtube" tabindex="-1" data-project="youtube">ChooseYourTube <span>Svelte + FastAPI</span></button>
               <button id="tab-rss" role="tab" aria-selected="false" aria-controls="project-rss" tabindex="-1" data-project="rss">Personal RSS Reader <span>React + FastAPI + ARQ</span></button>
               <button id="tab-bot" role="tab" aria-selected="false" aria-controls="project-bot" tabindex="-1" data-project="bot">Automation Bot <span>Discord.js + TypeScript</span></button>
             </div>
 
             <div class="project-stage">
+              <article id="project-thesis" class="project-detail" role="tabpanel" aria-labelledby="tab-thesis" data-project-panel="thesis">
+                <div class="project-copy">
+                  <p class="project-index">Master's thesis / Case study 01</p>
+                  <h3>Foreign Word Detection Research</h3>
+                  <p>Research into identifying words that do not belong to the primary language of a given text, supported by CLI and GUI prototypes of the complete detection pipeline.</p>
+                  <dl class="project-facts">
+                    <div><dt>Challenge</dt><dd>Detect foreign words relative to a text's automatically identified primary language.</dd></div>
+                    <div><dt>Approach</dt><dd>Build a shared pipeline that detects the main language, classifies candidate words, and returns the detected foreign words through CLI and GUI interfaces.</dd></div>
+                    <div><dt>Evaluation</dt><dd>Compare FastText, DeepSeek v4, and Gemma 4 under controlled conditions using labeled synthetic samples created by injecting foreign words into source texts.</dd></div>
+                  </dl>
+                </div>
+                <div class="system-map" aria-describedby="thesis-flow-description">
+                  <span class="map-label">Research and system flow</span>
+                  <div class="flow-lanes" aria-hidden="true">
+                    <div class="flow-lane">
+                      <span class="lane-label">Prototype pipeline</span>
+                      <div class="map-node client">CLI + GUI</div>
+                      <div class="map-path"><span>submit</span></div>
+                      <div class="map-node external">Input Text</div>
+                      <div class="map-path"><span>analyze</span></div>
+                      <div class="map-node service">Primary Language Detection</div>
+                      <div class="map-path"><span>establish context</span></div>
+                      <div class="map-node service">Foreign Word Detection</div>
+                      <div class="map-path"><span>return</span></div>
+                      <div class="map-node output">Detected Foreign Words</div>
+                    </div>
+                    <div class="flow-lane">
+                      <span class="lane-label">Method evaluation</span>
+                      <div class="map-node external">Source Text Samples</div>
+                      <div class="map-path"><span>inject foreign words</span></div>
+                      <div class="map-node worker">Synthetic Data Generation</div>
+                      <div class="map-path"><span>label</span></div>
+                      <div class="map-node database">Evaluation Dataset</div>
+                      <div class="map-path"><span>benchmark</span></div>
+                      <div class="map-node service">FastText / DeepSeek v4 / Gemma 4</div>
+                      <div class="map-path"><span>assess tradeoffs</span></div>
+                      <div class="map-node output">Method Comparison</div>
+                    </div>
+                  </div>
+                  <p id="thesis-flow-description">The CLI and GUI send text through a shared pipeline that detects its primary language and returns words classified as foreign. The research evaluation benchmarks FastText, DeepSeek v4, and Gemma 4 against a labeled synthetic dataset built by injecting foreign words into source texts.</p>
+                </div>
+              </article>
+
               <article id="project-youtube" class="project-detail" role="tabpanel" aria-labelledby="tab-youtube" data-project-panel="youtube">
                 <div class="project-copy">
-                  <p class="project-index">Case study / 01</p>
+                  <p class="project-index">Case study / 02</p>
                   <h3>ChooseYourTube</h3>
                   <p>A distraction-reduced YouTube experience that gives viewers more control over browsing and watching content.</p>
                   <dl class="project-facts"><div><dt>Challenge</dt><dd>Separate intentional viewing from an attention-driven interface.</dd></div><div><dt>Approach</dt><dd>Serve a focused Svelte client from a FastAPI-backed catalog kept current by asynchronous channel sync jobs.</dd></div></dl>
@@ -204,7 +254,7 @@
 
               <article id="project-rss" class="project-detail" role="tabpanel" aria-labelledby="tab-rss" data-project-panel="rss">
                 <div class="project-copy">
-                  <p class="project-index">Case study / 02</p><h3>Personal RSS Reader</h3>
+                  <p class="project-index">Case study / 03</p><h3>Personal RSS Reader</h3>
                   <p>An API-first feed reader for articles, YouTube sources, favorites, categories, and reading state.</p>
                   <dl class="project-facts"><div><dt>Challenge</dt><dd>Unify different content sources behind a focused reading workflow.</dd></div><div><dt>Approach</dt><dd>Normalize feed content through background ingestion while keeping reading state behind one API.</dd></div></dl>
                 </div>
@@ -220,7 +270,7 @@
 
               <article id="project-bot" class="project-detail" role="tabpanel" aria-labelledby="tab-bot" data-project-panel="bot">
                 <div class="project-copy">
-                  <p class="project-index">Case study / 03</p><h3>Productivity Automation Bot</h3>
+                  <p class="project-index">Case study / 04</p><h3>Productivity Automation Bot</h3>
                   <p>A TypeScript Discord bot that synchronizes tasks and calendar events and makes both systems available from Discord.</p>
                   <dl class="project-facts"><div><dt>Challenge</dt><dd>Coordinate planning across tools without duplicating the source of truth.</dd></div><div><dt>Approach</dt><dd>Use Discord as the interaction layer while Todoist and Google Calendar remain the specialized external services.</dd></div></dl>
                 </div>
@@ -276,13 +326,14 @@
 
             <article class="card timeline-item reveal">
               <div class="timeline-header">
-                <h3>Current Focus</h3>
-                <p>Master's in Software Engineering</p>
+                <h3>Master's in Software Engineering</h3>
+                <p>Completed in Madrid</p>
               </div>
               <p>
-                Completing graduate study in Madrid while continuing to build
-                backend-heavy projects and target roles in backend engineering,
-                platform engineering, and cloud systems.
+                Completed graduate study with a thesis on foreign word
+                detection, combining applied NLP research, comparative model
+                evaluation, synthetic dataset design, and working CLI and GUI
+                prototypes.
               </p>
             </article>
           </div>
