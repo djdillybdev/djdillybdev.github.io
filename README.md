@@ -1,8 +1,8 @@
 # Dylan Robinson — Portfolio
 
-A static, single-page portfolio focused on backend and platform engineering,
-distributed systems, applied NLP research, education, and professional
-experience.
+A static, single-page portfolio positioning Dylan as a backend-first software
+engineer with experience across distributed systems, cloud services, full-stack
+web development, applied NLP research, education, and professional delivery.
 
 ## Local preview
 
