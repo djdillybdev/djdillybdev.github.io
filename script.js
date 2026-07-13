@@ -31,26 +31,34 @@ tabs.forEach((tab, index) => {
 });
 selectProject(tabs[0]);
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add("is-visible");
-    revealObserver.unobserve(entry.target);
-  });
-}, { threshold: 0.12 });
+const revealItems = [...document.querySelectorAll(".reveal")];
 
-document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
 
 const navLinks = [...document.querySelectorAll('.nav nav a[href^="#"]')];
 const sections = navLinks.map((link) => document.querySelector(link.hash)).filter(Boolean);
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    navLinks.forEach((link) => link.removeAttribute("aria-current"));
-    document.querySelector(`.nav nav a[href="#${entry.target.id}"]`)?.setAttribute("aria-current", "location");
-  });
-}, { rootMargin: "-25% 0px -65%", threshold: 0 });
-sections.forEach((section) => sectionObserver.observe(section));
+if ("IntersectionObserver" in window) {
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((link) => link.removeAttribute("aria-current"));
+      document.querySelector(`.nav nav a[href="#${entry.target.id}"]`)?.setAttribute("aria-current", "location");
+    });
+  }, { rootMargin: "-25% 0px -65%", threshold: 0 });
+  sections.forEach((section) => sectionObserver.observe(section));
+}
 
 const timeline = document.querySelector(".timeline");
 function updateRoute() {

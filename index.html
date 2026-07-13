@@ -9,23 +9,87 @@
       content="Portfolio of Dylan Robinson, a backend software engineer focused on scalable APIs, distributed systems, data-heavy applications, and applied NLP research."
     />
     <meta name="theme-color" content="#101612" />
+    <meta name="author" content="Dylan Robinson" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Dylan Robinson | Software Engineer" />
-    <meta property="og:description" content="Backend depth and full-stack product experience across APIs, distributed systems, data, cloud tooling, and applied NLP research." />
+    <meta
+      property="og:title"
+      content="Dylan Robinson | Backend Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Backend depth and full-stack product experience across APIs, distributed systems, data, cloud tooling, and applied NLP research."
+    />
     <meta property="og:url" content="https://djdillybdev.github.io/" />
-    <meta name="twitter:card" content="summary" />
+    <meta
+      property="og:image"
+      content="https://djdillybdev.github.io/assets/social-preview.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Dylan Robinson, Backend and Platform Software Engineer"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Dylan Robinson | Backend Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Backend depth across scalable APIs, distributed systems, cloud infrastructure, and applied NLP research."
+    />
+    <meta
+      name="twitter:image"
+      content="https://djdillybdev.github.io/assets/social-preview.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Dylan Robinson, Backend and Platform Software Engineer"
+    />
+    <link rel="canonical" href="https://djdillybdev.github.io/" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dylan Robinson",
+        "url": "https://djdillybdev.github.io/",
+        "jobTitle": "Backend / Platform Software Engineer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Madrid",
+          "addressCountry": "ES"
+        },
+        "sameAs": [
+          "https://github.com/djdillybdev",
+          "https://linkedin.com/in/dylan-robinson-78b643157"
+        ],
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Northeastern University"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidad Politécnica de Madrid"
+          }
+        ]
+      }
+    </script>
     <script type="module" src="script.js"></script>
   </head>
   <body id="top">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container nav">
-          <a class="logo" href="#top" aria-label="Dylan Robinson home">DR</a>
+        <a class="logo" href="#top" aria-label="Dylan Robinson home">DR</a>
         <nav aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -36,7 +100,7 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow reveal">Backend Software Engineer / Full-stack builder</p>
+            <p class="eyebrow reveal">Backend / Platform Software Engineer</p>
             <h1>Dylan Robinson</h1>
             <p class="hero-text">
               I build scalable APIs, backend systems, and data-heavy services
@@ -48,24 +112,33 @@
 
             <dl class="field-notes" aria-label="Professional summary">
               <div>
-                <dt>Basecamp</dt>
+                <dt>Experience</dt>
+                <dd>5+ years</dd>
+              </div>
+              <div>
+                <dt>Production scale</dt>
+                <dd>100M+ weekly requests</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Backend / platform / cloud</dd>
+              </div>
+              <div>
+                <dt>Based in</dt>
                 <dd>Madrid, Spain</dd>
-              </div>
-              <div>
-                <dt>Route</dt>
-                <dd>Backend systems</dd>
-              </div>
-              <div>
-                <dt>Terrain</dt>
-                <dd>APIs / cloud / data</dd>
               </div>
             </dl>
 
             <div class="hero-actions">
               <a class="button button-primary" href="#projects"
-                >View Projects</a
+                >View Selected Work</a
               >
-              <a class="button button-secondary" href="#experience">Experience</a>
+              <a
+                class="button button-secondary"
+                href="assets/dylan-robinson-resume.pdf"
+                download
+                >Download Resume</a
+              >
             </div>
 
             <ul class="hero-links" aria-label="Contact links">
@@ -96,7 +169,7 @@
 
           <aside class="profile-panel reveal" aria-label="Professional focus">
             <img
-              src="https://github.com/djdillybdev.png"
+              src="assets/profile.png"
               alt="Dylan Robinson"
               width="160"
               height="160"
@@ -107,11 +180,10 @@
               <p class="panel-kicker">Engineering profile</p>
               <h2>Backend depth. Product range.</h2>
               <ul>
-                <li>Backend APIs and service design</li>
-                <li>Distributed systems and event-driven architecture</li>
-                <li>Data-heavy applications and integrations</li>
+                <li>Scalable APIs and distributed services</li>
+                <li>Event-driven and data-intensive systems</li>
+                <li>Production reliability and cloud delivery</li>
                 <li>Applied NLP research and model evaluation</li>
-                <li>Cloud infrastructure and developer tooling</li>
               </ul>
             </div>
           </aside>
@@ -133,15 +205,14 @@
                 observability, and production reliability.
               </p>
               <p>
-                My background includes high-scale health data systems, backend
-                features for SaaS platforms, and personal projects centered on
-                automation, productivity, and content platforms. I am passionate
-                about building useful products that solve real problems and help
-                improve people's lives.
+                I have delivered high-scale health data systems, SaaS product
+                features, and personal tools centered on automation,
+                productivity, and content. I value clear ownership, pragmatic
+                architecture, and products that improve people's lives.
               </p>
               <p>
-                I am currently based in Madrid and have completed a master's in
-                software engineering, including research into detecting foreign
+                I am currently based in Madrid and have defended my master's
+                thesis in software engineering, focused on detecting foreign
                 words in multilingual text. I continue to build backend-heavy
                 projects and pursue roles across backend, platform, and cloud
                 systems.
@@ -150,26 +221,37 @@
 
             <div class="panel reveal">
               <h3>Core technologies</h3>
-              <div class="tag-group">
-                <span>TypeScript</span>
-                <span>JavaScript</span>
-                <span>Python</span>
-                <span>SQL</span>
-                <span>PHP</span>
-                <span>Node.js</span>
-                <span>FastAPI</span>
-                <span>PostgreSQL</span>
-                <span>AWS</span>
-                <span>Docker</span>
-                <span>OpenSearch</span>
-                <span>React</span>
-                <span>Svelte</span>
-                <span>NLP</span>
-                <span>FastText</span>
-                <span>LLM Evaluation</span>
-                <span>GitHub Actions</span>
-                <span>Ansible</span>
-              </div>
+              <dl class="skill-groups">
+                <div>
+                  <dt>Backend</dt>
+                  <dd>
+                    <span>TypeScript</span><span>Node.js</span
+                    ><span>Python</span><span>FastAPI</span
+                    ><span>PHP / Laravel</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Data &amp; messaging</dt>
+                  <dd>
+                    <span>PostgreSQL</span><span>DynamoDB</span
+                    ><span>OpenSearch</span><span>SQS</span><span>Redis</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Cloud &amp; delivery</dt>
+                  <dd>
+                    <span>AWS</span><span>Lambda</span><span>Docker</span
+                    ><span>GitHub Actions</span><span>Ansible</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Product &amp; research</dt>
+                  <dd>
+                    <span>React</span><span>Svelte</span><span>NLP</span
+                    ><span>FastText</span><span>LLM Evaluation</span>
+                  </dd>
+                </div>
+              </dl>
             </div>
           </div>
         </div>
@@ -183,26 +265,102 @@
           </div>
 
           <div class="project-explorer reveal">
-            <div class="project-tabs" role="tablist" aria-label="Selected projects">
-              <button id="tab-thesis" role="tab" aria-selected="true" aria-controls="project-thesis" data-project="thesis">Foreign Word Detection Research <span>Master's thesis / Applied NLP</span></button>
-              <button id="tab-youtube" role="tab" aria-selected="false" aria-controls="project-youtube" tabindex="-1" data-project="youtube">ChooseYourTube <span>Svelte + FastAPI</span></button>
-              <button id="tab-rss" role="tab" aria-selected="false" aria-controls="project-rss" tabindex="-1" data-project="rss">Personal RSS Reader <span>React + FastAPI + ARQ</span></button>
-              <button id="tab-bot" role="tab" aria-selected="false" aria-controls="project-bot" tabindex="-1" data-project="bot">Automation Bot <span>Discord.js + TypeScript</span></button>
+            <div
+              class="project-tabs"
+              role="tablist"
+              aria-label="Selected projects"
+            >
+              <button
+                id="tab-thesis"
+                role="tab"
+                aria-selected="true"
+                aria-controls="project-thesis"
+                data-project="thesis"
+              >
+                Foreign Word Detection Research
+                <span>Master's thesis / Applied NLP</span>
+              </button>
+              <button
+                id="tab-youtube"
+                role="tab"
+                aria-selected="false"
+                aria-controls="project-youtube"
+                tabindex="-1"
+                data-project="youtube"
+              >
+                ChooseYourTube <span>Svelte + FastAPI</span>
+              </button>
+              <button
+                id="tab-guava"
+                role="tab"
+                aria-selected="false"
+                aria-controls="project-guava"
+                tabindex="-1"
+                data-project="guava"
+              >
+                Guava Health Visualizer <span>Python + Streamlit</span>
+              </button>
+              <button
+                id="tab-bot"
+                role="tab"
+                aria-selected="false"
+                aria-controls="project-bot"
+                tabindex="-1"
+                data-project="bot"
+              >
+                Automation Bot <span>Discord.js + TypeScript</span>
+              </button>
             </div>
 
             <div class="project-stage">
-              <article id="project-thesis" class="project-detail" role="tabpanel" aria-labelledby="tab-thesis" data-project-panel="thesis">
+              <article
+                id="project-thesis"
+                class="project-detail"
+                role="tabpanel"
+                aria-labelledby="tab-thesis"
+                data-project-panel="thesis"
+              >
                 <div class="project-copy">
-                  <p class="project-index">Master's thesis / Case study 01</p>
+                  <div class="project-meta">
+                    <p class="project-index">Master's thesis / Case study 01</p>
+                    <span class="project-status">Research prototype</span>
+                  </div>
                   <h3>Foreign Word Detection Research</h3>
-                  <p>Research into identifying words that do not belong to the primary language of a given text, supported by CLI and GUI prototypes of the complete detection pipeline.</p>
+                  <p>
+                    Research into identifying words that do not belong to the
+                    primary language of a given text, supported by CLI and GUI
+                    prototypes of the complete detection pipeline.
+                  </p>
                   <dl class="project-facts">
-                    <div><dt>Challenge</dt><dd>Detect foreign words relative to a text's automatically identified primary language.</dd></div>
-                    <div><dt>Approach</dt><dd>Build a shared pipeline that detects the main language, classifies candidate words, and returns the detected foreign words through CLI and GUI interfaces.</dd></div>
-                    <div><dt>Evaluation</dt><dd>Compare FastText, DeepSeek v4, and Gemma 4 under controlled conditions using labeled synthetic samples created by injecting foreign words into source texts.</dd></div>
+                    <div>
+                      <dt>Challenge</dt>
+                      <dd>
+                        Detect foreign words relative to a text's automatically
+                        identified primary language.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Approach</dt>
+                      <dd>
+                        Build a shared pipeline that detects the main language,
+                        classifies candidate words, and returns the detected
+                        foreign words through CLI and GUI interfaces.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Evaluation</dt>
+                      <dd>
+                        Compare FastText, DeepSeek v4, and Gemma 4 under
+                        controlled conditions using labeled synthetic samples
+                        created by injecting foreign words into source texts.
+                      </dd>
+                    </div>
                   </dl>
                 </div>
-                <div class="system-map" aria-describedby="thesis-flow-description">
+                <div
+                  class="system-map"
+                  aria-describedby="thesis-flow-description"
+                >
                   <span class="map-label">Research and system flow</span>
                   <div class="flow-lanes" aria-hidden="true">
                     <div class="flow-lane">
@@ -211,7 +369,9 @@
                       <div class="map-path"><span>submit</span></div>
                       <div class="map-node external">Input Text</div>
                       <div class="map-path"><span>analyze</span></div>
-                      <div class="map-node service">Primary Language Detection</div>
+                      <div class="map-node service">
+                        Primary Language Detection
+                      </div>
                       <div class="map-path"><span>establish context</span></div>
                       <div class="map-node service">Foreign Word Detection</div>
                       <div class="map-path"><span>return</span></div>
@@ -220,70 +380,285 @@
                     <div class="flow-lane">
                       <span class="lane-label">Method evaluation</span>
                       <div class="map-node external">Source Text Samples</div>
-                      <div class="map-path"><span>inject foreign words</span></div>
-                      <div class="map-node worker">Synthetic Data Generation</div>
+                      <div class="map-path">
+                        <span>inject foreign words</span>
+                      </div>
+                      <div class="map-node worker">
+                        Synthetic Data Generation
+                      </div>
                       <div class="map-path"><span>label</span></div>
                       <div class="map-node database">Evaluation Dataset</div>
                       <div class="map-path"><span>benchmark</span></div>
-                      <div class="map-node service">FastText / DeepSeek v4 / Gemma 4</div>
+                      <div class="map-node service">
+                        FastText / DeepSeek v4 / Gemma 4
+                      </div>
                       <div class="map-path"><span>assess tradeoffs</span></div>
                       <div class="map-node output">Method Comparison</div>
                     </div>
                   </div>
-                  <p id="thesis-flow-description">The CLI and GUI send text through a shared pipeline that detects its primary language and returns words classified as foreign. The research evaluation benchmarks FastText, DeepSeek v4, and Gemma 4 against a labeled synthetic dataset built by injecting foreign words into source texts.</p>
+                  <p id="thesis-flow-description">
+                    The CLI and GUI send text through a shared pipeline that
+                    detects its primary language and returns words classified as
+                    foreign. The research evaluation benchmarks FastText,
+                    DeepSeek v4, and Gemma 4 against a labeled synthetic dataset
+                    built by injecting foreign words into source texts.
+                  </p>
                 </div>
               </article>
 
-              <article id="project-youtube" class="project-detail" role="tabpanel" aria-labelledby="tab-youtube" data-project-panel="youtube">
+              <article
+                id="project-youtube"
+                class="project-detail"
+                role="tabpanel"
+                aria-labelledby="tab-youtube"
+                data-project-panel="youtube"
+              >
                 <div class="project-copy">
-                  <p class="project-index">Case study / 02</p>
+                  <div class="project-meta">
+                    <p class="project-index">Case study / 02</p>
+                    <span class="project-status public">Public repository</span>
+                  </div>
                   <h3>ChooseYourTube</h3>
-                  <p>A distraction-reduced YouTube experience that gives viewers more control over browsing and watching content.</p>
-                  <dl class="project-facts"><div><dt>Challenge</dt><dd>Separate intentional viewing from an attention-driven interface.</dd></div><div><dt>Approach</dt><dd>Serve a focused Svelte client from a FastAPI-backed catalog kept current by asynchronous channel sync jobs.</dd></div></dl>
-                  <div class="project-links"><a href="https://github.com/djdillybdev/ChooseYourTube" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a></div>
+                  <p>
+                    A distraction-reduced YouTube experience that gives viewers
+                    more control over browsing and watching content.
+                  </p>
+                  <dl class="project-facts">
+                    <div>
+                      <dt>Challenge</dt>
+                      <dd>
+                        Separate intentional viewing from an attention-driven
+                        interface.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Approach</dt>
+                      <dd>
+                        Serve a focused Svelte client from a FastAPI-backed
+                        catalog kept current by asynchronous channel sync jobs.
+                      </dd>
+                    </div>
+                  </dl>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/djdillybdev/ChooseYourTube"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >View repository
+                      <span aria-hidden="true">&#8599;</span></a
+                    >
+                  </div>
                 </div>
-                <div class="system-map" aria-describedby="youtube-flow-description">
+                <div
+                  class="system-map"
+                  aria-describedby="youtube-flow-description"
+                >
                   <span class="map-label">System flow</span>
                   <div class="flow-lanes" aria-hidden="true">
-                    <div class="flow-lane"><span class="lane-label">Request path</span><div class="map-node client">Svelte Web App</div><div class="map-path bidirectional"><span>API requests</span></div><div class="map-node service">FastAPI</div><div class="map-path bidirectional"><span>read / write</span></div><div class="map-node database">PostgreSQL</div></div>
-                    <div class="flow-lane"><span class="lane-label">Channel updates</span><div class="map-node service">FastAPI</div><div class="map-path"><span>enqueue</span></div><div class="map-node queue">Redis / ARQ</div><div class="map-path"><span>dispatch</span></div><div class="map-node worker">ARQ Worker</div><div class="map-path bidirectional"><span>fetch updates</span></div><div class="map-node external">YouTube Data API</div><div class="map-path"><span>persist</span></div><div class="map-node database">PostgreSQL</div></div>
+                    <div class="flow-lane">
+                      <span class="lane-label">Request path</span>
+                      <div class="map-node client">Svelte Web App</div>
+                      <div class="map-path bidirectional">
+                        <span>API requests</span>
+                      </div>
+                      <div class="map-node service">FastAPI</div>
+                      <div class="map-path bidirectional">
+                        <span>read / write</span>
+                      </div>
+                      <div class="map-node database">PostgreSQL</div>
+                    </div>
+                    <div class="flow-lane">
+                      <span class="lane-label">Channel updates</span>
+                      <div class="map-node service">FastAPI</div>
+                      <div class="map-path"><span>enqueue</span></div>
+                      <div class="map-node queue">Redis / ARQ</div>
+                      <div class="map-path"><span>dispatch</span></div>
+                      <div class="map-node worker">ARQ Worker</div>
+                      <div class="map-path bidirectional">
+                        <span>fetch updates</span>
+                      </div>
+                      <div class="map-node external">YouTube Data API</div>
+                      <div class="map-path"><span>persist</span></div>
+                      <div class="map-node database">PostgreSQL</div>
+                    </div>
                   </div>
-                  <p id="youtube-flow-description">The Svelte app gets its data from FastAPI and PostgreSQL. FastAPI schedules Redis-backed ARQ jobs whose workers fetch channel updates from the YouTube Data API and persist them in PostgreSQL.</p>
+                  <p id="youtube-flow-description">
+                    The Svelte app gets its data from FastAPI and PostgreSQL.
+                    FastAPI schedules Redis-backed ARQ jobs whose workers fetch
+                    channel updates from the YouTube Data API and persist them
+                    in PostgreSQL.
+                  </p>
                 </div>
               </article>
 
-              <article id="project-rss" class="project-detail" role="tabpanel" aria-labelledby="tab-rss" data-project-panel="rss">
+              <article
+                id="project-guava"
+                class="project-detail"
+                role="tabpanel"
+                aria-labelledby="tab-guava"
+                data-project-panel="guava"
+              >
                 <div class="project-copy">
-                  <p class="project-index">Case study / 03</p><h3>Personal RSS Reader</h3>
-                  <p>An API-first feed reader for articles, YouTube sources, favorites, categories, and reading state.</p>
-                  <dl class="project-facts"><div><dt>Challenge</dt><dd>Unify different content sources behind a focused reading workflow.</dd></div><div><dt>Approach</dt><dd>Normalize feed content through background ingestion while keeping reading state behind one API.</dd></div></dl>
-                </div>
-                <div class="system-map" aria-describedby="rss-flow-description">
-                  <span class="map-label">System flow</span>
-                  <div class="flow-lanes" aria-hidden="true">
-                    <div class="flow-lane"><span class="lane-label">Reading path</span><div class="map-node client">React Web App</div><div class="map-path bidirectional"><span>API requests</span></div><div class="map-node service">FastAPI</div><div class="map-path bidirectional"><span>read / write</span></div><div class="map-node database">PostgreSQL</div></div>
-                    <div class="flow-lane"><span class="lane-label">Feed ingestion</span><div class="map-node external">RSS + YouTube Feeds</div><div class="map-path bidirectional"><span>poll sources</span></div><div class="map-node worker">ARQ Worker</div><div class="map-path bidirectional"><span>jobs</span></div><div class="map-node queue">Redis / ARQ</div><div class="map-path"><span>normalize + persist</span></div><div class="map-node database">PostgreSQL</div></div>
+                  <div class="project-meta">
+                    <p class="project-index">Case study / 03</p>
+                    <span class="project-status">Public repository</span>
                   </div>
-                  <p id="rss-flow-description">The React app uses FastAPI for content and reading state stored in PostgreSQL. Redis-backed ARQ workers poll RSS and YouTube feeds, normalize new content, and persist it.</p>
+                  <h3>Guava Health Visualizer</h3>
+                  <p>
+                    An interactive application for combining and exploring
+                    time-series health data exported from Guava and Apple
+                    Health.
+                  </p>
+                  <dl class="project-facts">
+                    <div>
+                      <dt>Challenge</dt>
+                      <dd>
+                        Turn differently structured health exports into a
+                        consistent daily view for comparing wellness metrics.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Approach</dt>
+                      <dd>
+                        Parse and aggregate activity, sleep, heart-rate, symptom,
+                        energy, water, and mobility data, then expose filters,
+                        moving averages, and metric comparisons in Streamlit.
+                      </dd>
+                    </div>
+                  </dl>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/djdillybdev/GuavaHealthVisualizer"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >View repository
+                      <span aria-hidden="true">&#8599;</span></a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="system-map"
+                  aria-describedby="guava-flow-description"
+                >
+                  <span class="map-label">Analysis flow</span>
+                  <div class="flow-lanes" aria-hidden="true">
+                    <div class="flow-lane">
+                      <span class="lane-label">Data preparation</span>
+                      <div class="map-node external">
+                        Guava CSV + Apple Health XML
+                      </div>
+                      <div class="map-path">
+                        <span>parse + aggregate</span>
+                      </div>
+                      <div class="map-node worker">Python + Pandas</div>
+                      <div class="map-path">
+                        <span>normalize by day</span>
+                      </div>
+                      <div class="map-node database">Daily Health Dataset</div>
+                    </div>
+                    <div class="flow-lane">
+                      <span class="lane-label">Interactive exploration</span>
+                      <div class="map-node database">Daily Health Dataset</div>
+                      <div class="map-path">
+                        <span>filter + compare</span>
+                      </div>
+                      <div class="map-node client">Streamlit Controls</div>
+                      <div class="map-path">
+                        <span>render insights</span>
+                      </div>
+                      <div class="map-node output">
+                        Plotly Trends + Metric Comparisons
+                      </div>
+                    </div>
+                  </div>
+                  <p id="guava-flow-description">
+                    Python and Pandas parse Guava CSV and Apple Health XML
+                    exports into a normalized daily dataset. Streamlit controls
+                    and Plotly visualizations support filtering, trend analysis,
+                    and comparisons between health metrics.
+                  </p>
                 </div>
               </article>
 
-              <article id="project-bot" class="project-detail" role="tabpanel" aria-labelledby="tab-bot" data-project-panel="bot">
+              <article
+                id="project-bot"
+                class="project-detail"
+                role="tabpanel"
+                aria-labelledby="tab-bot"
+                data-project-panel="bot"
+              >
                 <div class="project-copy">
-                  <p class="project-index">Case study / 04</p><h3>Productivity Automation Bot</h3>
-                  <p>A TypeScript Discord bot that synchronizes tasks and calendar events and makes both systems available from Discord.</p>
-                  <dl class="project-facts"><div><dt>Challenge</dt><dd>Coordinate planning across tools without duplicating the source of truth.</dd></div><div><dt>Approach</dt><dd>Use Discord as the interaction layer while Todoist and Google Calendar remain the specialized external services.</dd></div></dl>
+                  <div class="project-meta">
+                    <p class="project-index">Case study / 04</p>
+                    <span class="project-status">Personal project</span>
+                  </div>
+                  <h3>Productivity Automation Bot</h3>
+                  <p>
+                    A TypeScript Discord bot that synchronizes tasks and
+                    calendar events and makes both systems available from
+                    Discord.
+                  </p>
+                  <dl class="project-facts">
+                    <div>
+                      <dt>Challenge</dt>
+                      <dd>
+                        Coordinate planning across tools without duplicating the
+                        source of truth.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Approach</dt>
+                      <dd>
+                        Use Discord as the interaction layer while Todoist and
+                        Google Calendar remain the specialized external
+                        services.
+                      </dd>
+                    </div>
+                  </dl>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/djdillybdev/beanbot"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >View repository
+                      <span aria-hidden="true">&#8599;</span></a
+                    >
+                  </div>
                 </div>
-                <div class="system-map bot-map" aria-describedby="bot-flow-description">
+                <div
+                  class="system-map bot-map"
+                  aria-describedby="bot-flow-description"
+                >
                   <span class="map-label">System flow</span>
                   <div class="bot-flow" aria-hidden="true">
-                    <div class="map-node client bot-discord">Discord</div><div class="map-path bot-link-discord bidirectional"><span>commands + responses</span></div>
-                    <div class="map-node service bot-core">TypeScript Discord Bot</div>
-                    <div class="map-path bot-link-todoist bidirectional"><span>tasks + sync</span></div><div class="map-node external bot-todoist">Todoist</div>
-                    <div class="map-path bot-link-calendar bidirectional"><span>events + sync</span></div><div class="map-node external bot-calendar">Google Calendar</div>
-                    <div class="map-path bot-link-state bidirectional"><span>state</span></div><div class="map-node database bot-state">SQLite</div>
+                    <div class="map-node client bot-discord">Discord</div>
+                    <div class="map-path bot-link-discord bidirectional">
+                      <span>commands + responses</span>
+                    </div>
+                    <div class="map-node service bot-core">
+                      TypeScript Discord Bot
+                    </div>
+                    <div class="map-path bot-link-todoist bidirectional">
+                      <span>tasks + sync</span>
+                    </div>
+                    <div class="map-node external bot-todoist">Todoist</div>
+                    <div class="map-path bot-link-calendar bidirectional">
+                      <span>events + sync</span>
+                    </div>
+                    <div class="map-node external bot-calendar">
+                      Google Calendar
+                    </div>
+                    <div class="map-path bot-link-state bidirectional">
+                      <span>state</span>
+                    </div>
+                    <div class="map-node database bot-state">SQLite</div>
                   </div>
-                  <p id="bot-flow-description">The TypeScript bot receives commands and returns planning views through Discord. It synchronizes tasks with Todoist, events with Google Calendar, and keeps internal integration state in SQLite.</p>
+                  <p id="bot-flow-description">
+                    The TypeScript bot receives commands and returns planning
+                    views through Discord. It synchronizes tasks with Todoist,
+                    events with Google Calendar, and keeps internal integration
+                    state in SQLite.
+                  </p>
                 </div>
               </article>
             </div>
@@ -291,50 +666,288 @@
         </div>
       </section>
 
+      <section id="education" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">03 / Foundations</p>
+            <h2>Education</h2>
+          </div>
+
+          <div class="education-grid">
+            <article class="card education-card education-featured reveal">
+              <header class="education-header">
+                <div>
+                  <p class="degree-type">Graduate study</p>
+                  <h3>European Master in Software Engineering</h3>
+                </div>
+                <span class="degree-status">Thesis defended</span>
+              </header>
+              <p class="education-meta">
+                <strong>Universidad Polit&eacute;cnica de Madrid</strong>
+                <span>2024&ndash;2026</span>
+              </p>
+              <p class="education-summary">
+                A 120-ECTS, four-semester program combining software
+                architecture, requirements, quality, verification, project
+                delivery, and advanced software engineering topics.
+              </p>
+
+              <div
+                class="learning-themes"
+                aria-label="Selected master's coursework"
+              >
+                <section class="learning-theme">
+                  <h4>Inclusive and health-centered computing</h4>
+                  <ul class="course-list">
+                    <li>
+                      Challenges for Accessible Computing for People with
+                      Functional Diversity
+                    </li>
+                    <li>E-Health: Promoting Active and Healthy Ageing</li>
+                  </ul>
+                  <p>
+                    Developed a stronger understanding of accessibility
+                    evaluation, design for functional diversity, and how digital
+                    systems can support healthier, more independent ageing.
+                  </p>
+                </section>
+
+                <section class="learning-theme">
+                  <h4>Adaptive and agent-based systems</h4>
+                  <ul class="course-list">
+                    <li>Adaptive Systems</li>
+                    <li>Agent-Based Software Development</li>
+                  </ul>
+                  <p>
+                    Explored software that responds to changing context,
+                    autonomous agent behavior, coordination between components,
+                    and collaborative system development.
+                  </p>
+                </section>
+
+                <section class="learning-theme">
+                  <h4>Agile and user-centered delivery</h4>
+                  <ul class="course-list">
+                    <li>
+                      Agile Software Development: Agile Practices and Agile
+                      Usability
+                    </li>
+                  </ul>
+                  <p>
+                    Applied iterative planning, usability-aware development,
+                    team feedback, and continuous improvement to evolving
+                    software requirements.
+                  </p>
+                </section>
+              </div>
+
+              <p class="thesis-note">
+                <strong>Master's thesis:</strong> independently researched,
+                implemented, evaluated, and defended a foreign-word detection
+                pipeline, featured above in Selected Work.
+              </p>
+            </article>
+
+            <article class="card education-card reveal">
+              <header class="education-header">
+                <div>
+                  <p class="degree-type">Undergraduate study</p>
+                  <h3>Bachelor of Science in Computer Science</h3>
+                </div>
+              </header>
+              <p class="education-meta">
+                <strong>Northeastern University</strong>
+                <span>2016&ndash;2021</span>
+              </p>
+              <p class="education-summary">
+                Built the computer science and software development foundation
+                that supports my professional engineering work and later
+                graduate study.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="experience" class="section">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow">03 / Elevation</p>
-            <h2>Highlights</h2>
+            <p class="eyebrow">04 / Elevation</p>
+            <h2>Experience</h2>
           </div>
 
           <div class="timeline" aria-label="Career route">
             <div class="route-line" aria-hidden="true"><i></i></div>
             <article class="card timeline-item reveal">
               <div class="timeline-header">
-                <h3>Software Engineer - 1upHealth</h3>
-                <p>Boston, MA</p>
+                <div class="experience-title">
+                  <p class="experience-company">Cofrai</p>
+                  <h3>Software Engineer (Master's Internship)</h3>
+                </div>
+                <div class="experience-meta">
+                  <p>
+                    <time datetime="2025-06">June 2025</time> &ndash;
+                    <time datetime="2026-05">May 2026</time>
+                  </p>
+                  <p>Madrid, Spain</p>
+                </div>
               </div>
-              <p>
-                Worked on backend systems and APIs handling high-volume health
-                data workloads, with a focus on scalable services, reliability,
-                and distributed processing.
-              </p>
+              <ul class="experience-highlights">
+                <li>
+                  Built Laravel features and secure external API integrations
+                  for a SaaS platform used by
+                  <strong class="impact-metric"
+                    >100+ maintenance businesses</strong
+                  >, improving operational workflows and communication.
+                </li>
+                <li>
+                  Created a Mapbox-based geospatial search interface that helps
+                  maintenance teams locate
+                  <strong class="impact-metric">100+ customers</strong> across
+                  Spain with less manual lookup.
+                </li>
+                <li>
+                  Resolved production issues and streamlined daily work through
+                  context-aware form autofill and advanced Filament table
+                  filtering.
+                </li>
+              </ul>
+              <ul class="role-tech" aria-label="Technologies used at Cofrai">
+                <li>Laravel</li>
+                <li>PHP</li>
+                <li>Filament</li>
+                <li>Mapbox</li>
+                <li>APIs</li>
+              </ul>
             </article>
 
             <article class="card timeline-item reveal">
               <div class="timeline-header">
-                <h3>Software Engineer Intern - Cofrai</h3>
-                <p>Madrid, Spain</p>
+                <div class="experience-title">
+                  <p class="experience-company">1upHealth</p>
+                  <h3>Software Engineer II</h3>
+                </div>
+                <div class="experience-meta">
+                  <p>
+                    <time datetime="2020-06">June 2020</time> &ndash;
+                    <time datetime="2024-08">August 2024</time>
+                  </p>
+                  <p>Boston, Massachusetts, USA</p>
+                </div>
               </div>
-              <p>
-                Built backend and product-facing features in a SaaS platform,
-                contributing to application functionality and maintainable web
-                development workflows.
-              </p>
+              <ul class="experience-highlights">
+                <li>
+                  Developed and operated a high-throughput Node.js API for FHIR
+                  resources handling
+                  <strong class="impact-metric">100M+ weekly requests</strong>
+                  in a distributed AWS environment.
+                </li>
+                <li>
+                  Designed event-driven systems using AWS SQS to process
+                  <strong class="impact-metric"
+                    >600K+ daily healthcare resource updates</strong
+                  >
+                  and notify downstream services.
+                </li>
+                <li>
+                  Led development of a bulk export system for
+                  <strong class="impact-metric">100K+ patient records</strong>
+                  stored across DynamoDB and OpenSearch.
+                </li>
+                <li>
+                  Engineered a data lifecycle pipeline that deleted
+                  <strong class="impact-metric">500M+ records</strong> across
+                  <strong class="impact-metric">140 DynamoDB tables</strong>
+                  while preserving multi-tenant system integrity.
+                </li>
+                <li>
+                  Built serverless AWS Lambda services and improved production
+                  reliability through incident analysis, structured logging,
+                  testing, and monitoring.
+                </li>
+              </ul>
+              <ul class="role-tech" aria-label="Technologies used at 1upHealth">
+                <li>Node.js</li>
+                <li>AWS</li>
+                <li>FHIR</li>
+                <li>SQS</li>
+                <li>Lambda</li>
+                <li>DynamoDB</li>
+                <li>OpenSearch</li>
+              </ul>
             </article>
 
             <article class="card timeline-item reveal">
               <div class="timeline-header">
-                <h3>Master's in Software Engineering</h3>
-                <p>Completed in Madrid</p>
+                <div class="experience-title">
+                  <p class="experience-company">Decibel Therapeutics</p>
+                  <h3>Software Engineer Co-op</h3>
+                </div>
+                <div class="experience-meta">
+                  <p>
+                    <time datetime="2019-07">July 2019</time> &ndash;
+                    <time datetime="2019-12">December 2019</time>
+                  </p>
+                  <p>Boston, Massachusetts, USA</p>
+                </div>
               </div>
-              <p>
-                Completed graduate study with a thesis on foreign word
-                detection, combining applied NLP research, comparative model
-                evaluation, synthetic dataset design, and working CLI and GUI
-                prototypes.
-              </p>
+              <ul class="experience-highlights">
+                <li>
+                  Built a full-stack internal research platform using React,
+                  Node.js, GraphQL, and PostgreSQL to coordinate and track
+                  clinical studies.
+                </li>
+                <li>
+                  Implemented document automation and testing workflows that
+                  improved reliability and operational efficiency for clinical
+                  researchers.
+                </li>
+                <li>
+                  Performed exploratory analysis on
+                  <strong class="impact-metric">3K+ audiograms</strong> using
+                  unsupervised machine learning techniques.
+                </li>
+              </ul>
+              <ul
+                class="role-tech"
+                aria-label="Technologies used at Decibel Therapeutics"
+              >
+                <li>React</li>
+                <li>Node.js</li>
+                <li>GraphQL</li>
+                <li>PostgreSQL</li>
+                <li>Machine Learning</li>
+              </ul>
+            </article>
+
+            <article class="card timeline-item reveal">
+              <div class="timeline-header">
+                <div class="experience-title">
+                  <p class="experience-company">ERT</p>
+                  <h3>Project Software Test Engineer Co-op</h3>
+                </div>
+                <div class="experience-meta">
+                  <p>
+                    <time datetime="2018-07">July 2018</time> &ndash;
+                    <time datetime="2018-12">December 2018</time>
+                  </p>
+                  <p>Boston, Massachusetts, USA</p>
+                </div>
+              </div>
+              <ul class="experience-highlights">
+                <li>
+                  Established and executed validation test plans for eClinical
+                  software and hardware used across
+                  <strong class="impact-metric"
+                    >1,000+ global pharmaceutical trials</strong
+                  >, supporting data integrity and patient safety.
+                </li>
+              </ul>
+              <ul class="role-tech" aria-label="Skills used at ERT">
+                <li>Validation Testing</li>
+                <li>eClinical</li>
+                <li>Quality Assurance</li>
+              </ul>
             </article>
           </div>
         </div>
@@ -344,7 +957,7 @@
         <div class="container">
           <div class="contact-panel reveal">
             <div>
-              <p class="eyebrow">04 / Trailhead</p>
+              <p class="eyebrow">05 / Trailhead</p>
               <h2>Let's connect</h2>
               <p>
                 I am interested in backend engineering roles where I can work on
@@ -374,6 +987,13 @@
               >
                 LinkedIn
               </a>
+              <a
+                class="button button-secondary"
+                href="assets/dylan-robinson-resume.pdf"
+                download
+              >
+                Resume
+              </a>
             </div>
           </div>
         </div>
@@ -385,8 +1005,19 @@
         <p><strong>Dylan Robinson</strong> / Software Engineer</p>
         <nav aria-label="Footer navigation">
           <a href="mailto:dylrob123@gmail.com">Email</a>
-          <a href="https://github.com/djdillybdev" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/dylan-robinson-78b643157" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a
+            href="https://github.com/djdillybdev"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/dylan-robinson-78b643157"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a href="assets/dylan-robinson-resume.pdf" download>Resume</a>
         </nav>
       </div>
     </footer>
